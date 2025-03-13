@@ -1,0 +1,26 @@
+# Attempt 1
+
+def top_logic1(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.get_color()='red'
+            bit.paint('green')
+
+# Attempt 2
+
+def top_logic1(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.get_color()=='red'
+            bit.paint('green')
+
+# Attempt 3
+
+def top_logic1(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.get_color()=='red':
+            bit.paint('green')
