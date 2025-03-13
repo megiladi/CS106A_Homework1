@@ -1,0 +1,70 @@
+# Attempt 1
+
+def tunnel(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.left_clear():
+            bit.left()
+            bit.move()
+            bit.paint('blue')
+            bit.right()
+            bit.right()
+            bit.move()
+            bit.left()
+         elif bit.right_clear():
+            bit.right()
+            bit.move()
+            bit.paint('blue')
+            bit.left()
+            bit.left()
+            bit.move()
+            bit.right()
+
+# Attempt 2 - Fixed indentation on line 38
+
+def tunnel(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.left_clear():
+            bit.left()
+            bit.move()
+            bit.paint('blue')
+            bit.right()
+            bit.right()
+            bit.move()
+            bit.left()
+        elif bit.right_clear():
+            bit.right()
+            bit.move()
+            bit.paint('blue')
+            bit.left()
+            bit.left()
+            bit.move()
+            bit.right()
+
+# Attempt 3 - Changed 'elif' to 'if' so that both right and left sides are checked
+
+def tunnel(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.left_clear():
+            bit.left()
+            bit.move()
+            bit.paint('blue')
+            bit.right()
+            bit.right()
+            bit.move()
+            bit.left()
+        if bit.right_clear():
+            bit.right()
+            bit.move()
+            bit.paint('blue')
+            bit.left()
+            bit.left()
+            bit.move()
+            bit.right()
+
+
