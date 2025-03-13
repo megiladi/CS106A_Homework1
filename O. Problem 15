@@ -1,0 +1,72 @@
+# Part 1 - Attempt 1
+
+def do_room(bit):
+    """
+    Begin in door, paint room green
+    as described in handout.
+    """
+    bit.move()
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+    bit.left()
+    bit.left()
+    bit.paint('green')
+    while bit.front_clear():
+        bit.move()
+        bit.paint('green')
+    bit.left()
+    bit.left()
+    while not bit.right_clear():
+        bit.move()
+    bit.right()
+    bit.move()
+
+# Part 2 - Attempt 1
+
+def do_hall(filename):
+    """
+    Move to the end of the hall,
+    painting all rooms green.
+    """
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if not bit.right_clear():
+            bit.right()
+            bit.move()
+            do_room(bit)
+            bit.move()
+            bit.right()
+        if not bit.left_clear():
+            bit.left()
+            bit.move()
+            do_room(bit)
+            bit.move()
+            bit.left()
+
+# Part 2 - Attempt 2 - Removed "not" from lines 58 and 64
+
+def do_hall(filename):
+    """
+    Move to the end of the hall,
+    painting all rooms green.
+    """
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.right_clear():
+            bit.right()
+            bit.move()
+            do_room(bit)
+            bit.move()
+            bit.right()
+        if bit.left_clear():
+            bit.left()
+            bit.move()
+            do_room(bit)
+            bit.move()
+            bit.left()
+
+
+
