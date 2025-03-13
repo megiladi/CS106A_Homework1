@@ -1,0 +1,32 @@
+# Attempt 1
+
+def change_green(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.set_color()=='green':
+            bit.paint('blue')
+        elif bit.set_color()==None
+            bit.paint('blue') 
+
+# Attempt 2
+
+def change_green(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.set_color()=='green':
+            bit.paint('blue')
+        elif bit.set_color()==None:
+            bit.paint('blue') 
+
+# Attempt 3
+
+def change_green(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.get_color()=='green':
+            bit.paint('blue')
+        elif bit.get_color()==None:
+            bit.paint('blue') 
