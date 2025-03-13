@@ -1,0 +1,53 @@
+# Part 1 - Attempt 1
+
+def do_tree(bit):
+    bit.paint('red')
+    bit.right()
+    bit.move()
+    bit.paint('green')
+    bit.left()
+    bit.move()
+    bit.left()
+    bit.move()
+    bit.paint('green')
+    bit.move()
+    bit.left()
+    bit.move()
+    bit.paint('green')
+    bit.left()
+    bit.move()
+    bit.right()
+    bit.move()
+
+# Part 1 - Attempt 2 - Added line 25
+
+def do_tree(bit):
+    bit.move()
+    bit.paint('red')
+    bit.right()
+    bit.move()
+    bit.paint('green')
+    bit.left()
+    bit.move()
+    bit.left()
+    bit.move()
+    bit.paint('green')
+    bit.move()
+    bit.left()
+    bit.move()
+    bit.paint('green')
+    bit.left()
+    bit.move()
+    bit.right()
+    bit.move()
+
+# Part 2 - Attempt 3 - Did some personal back and forth, so didn't capture all versions as it was less about debugging and more about figuring out how things worked
+
+def do_forest(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        if bit.get_color()=='red':
+            bit.left()
+            do_tree(bit)
+            bit.left()
