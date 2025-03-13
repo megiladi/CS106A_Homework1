@@ -1,0 +1,30 @@
+# Attempt 1
+
+def upward_blue(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        bit.paint('green')
+    bit.left()
+    while bit.get_color()!='blue'
+        bit.move()
+    bit.left()
+    while bit.get_color()=='blue'
+        bit.move()
+    bit.paint('red')
+    
+# Attempt 2 - Added ":" to lines 24 and 27
+
+def upward_blue(filename):
+    bit = Bit(filename)
+    while bit.front_clear():
+        bit.move()
+        bit.paint('green')
+    bit.left()
+    while bit.get_color()!='blue':
+        bit.move()
+    bit.left()
+    while bit.get_color()=='blue':
+        bit.move()
+    bit.paint('red')
+    
