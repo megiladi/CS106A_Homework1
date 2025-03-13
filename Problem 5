@@ -9,7 +9,7 @@ def change_green(filename):
         elif bit.set_color()==None
             bit.paint('blue') 
 
-# Attempt 2
+# Attempt 2 - Add ":" on line 20
 
 def change_green(filename):
     bit = Bit(filename)
@@ -20,7 +20,7 @@ def change_green(filename):
         elif bit.set_color()==None:
             bit.paint('blue') 
 
-# Attempt 3
+# Attempt 3 - Change "set" to "get" throughout
 
 def change_green(filename):
     bit = Bit(filename)
