@@ -1,0 +1,109 @@
+# Attempt 1
+
+def go_hide(filename):
+    bit = Bit(filename)
+    
+    # move until solid black square to bit's left
+    while bit.left_clear():
+        bit.move()
+        
+    # turn right and then move forward until the first green square
+    bit.right()
+    while bit.get_color()!='green':
+        bit.move()
+    
+    # Turn right and move one square forward
+    # Move down the hole until an empty square appears to bit's right
+    bit.right()
+    bit.move()
+    while bit.right_clear():
+        bit.move()
+        
+    # Turn right and then move until blocked
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+    
+    # Turn right and then move until on a non-blue square
+    bit.right()
+    while bit.get_color()='blue'
+        bit.move()
+        
+    # Turn left and move one square; paint it green
+    bit.left()
+    bit.move()
+    bit.paint('green')
+    
+# Attempt 2 - Added second "=" and ":" to line 65
+
+def go_hide(filename):
+    bit = Bit(filename)
+    
+    # move until solid black square to bit's left
+    while bit.left_clear():
+        bit.move()
+        
+    # turn right and then move forward until the first green square
+    bit.right()
+    while bit.get_color()!='green':
+        bit.move()
+    
+    # Turn right and move one square forward
+    # Move down the hole until an empty square appears to bit's right
+    bit.right()
+    bit.move()
+    while bit.right_clear():
+        bit.move()
+        
+    # Turn right and then move until blocked
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+    
+    # Turn right and then move until on a non-blue square
+    bit.right()
+    while bit.get_color()=='blue':
+        bit.move()
+        
+    # Turn left and move one square; paint it green
+    bit.left()
+    bit.move()
+    bit.paint('green')
+
+# Attempt 3 - Added "not" to line 91
+
+def go_hide(filename):
+    bit = Bit(filename)
+    
+    # move until solid black square to bit's left
+    while bit.left_clear():
+        bit.move()
+        
+    # turn right and then move forward until the first green square
+    bit.right()
+    while bit.get_color()!='green':
+        bit.move()
+    
+    # Turn right and move one square forward
+    # Move down the hole until an empty square appears to bit's right
+    bit.right()
+    bit.move()
+    while not bit.right_clear():
+        bit.move()
+        
+    # Turn right and then move until blocked
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+    
+    # Turn right and then move until on a non-blue square
+    bit.right()
+    while bit.get_color()=='blue':
+        bit.move()
+        
+    # Turn left and move one square; paint it green
+    bit.left()
+    bit.move()
+    bit.paint('green')
+    
+
