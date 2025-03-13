@@ -1,0 +1,32 @@
+# Attempt 1
+
+def top_bot(filename):
+    bit = Bit(filename)
+    bit.paint('blue')
+    while bit.front_clear():
+        bit.move()
+        bit.paint('blue')
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+        bit.paint('green')
+
+# Attempt 2
+
+def top_bot(filename):
+    bit = Bit(filename)
+    bit.paint('blue')
+    while bit.front_clear():
+        bit.move()
+        bit.paint('blue')
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+    bit.right()
+    bit.paint('green')
+    while bit.front_clear():
+        bit.move()
+        bit.paint('green')
