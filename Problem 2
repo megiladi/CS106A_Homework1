@@ -14,7 +14,7 @@ def top_bot(filename):
         bit.move()
         bit.paint('green')
 
-# Attempt 2
+# Attempt 2 - Updated to add line 29
 
 def top_bot(filename):
     bit = Bit(filename)
