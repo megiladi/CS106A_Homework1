@@ -7,7 +7,7 @@ def top_logic1(filename):
         if bit.get_color()='red'
             bit.paint('green')
 
-# Attempt 2
+# Attempt 2 - Added 2nd "=" on line 16
 
 def top_logic1(filename):
     bit = Bit(filename)
@@ -16,7 +16,7 @@ def top_logic1(filename):
         if bit.get_color()=='red'
             bit.paint('green')
 
-# Attempt 3
+# Attempt 3 - Added ":" on line 25
 
 def top_logic1(filename):
     bit = Bit(filename)
