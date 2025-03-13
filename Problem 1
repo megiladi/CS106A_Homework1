@@ -1,0 +1,7 @@
+def top_rgb(filename):
+    bit = Bit(filename)
+    bit.paint('red')
+    while bit.front_clear():
+        bit.move()
+        bit.paint('green')
+    bit.paint('blue')
