@@ -1,0 +1,33 @@
+# Attempt 1
+
+def up_green(filename):
+    bit = Bit(filename)
+    while not bit.right_clear():
+        bit.move()
+        if bit.left_clear():
+            bit.left()
+            bit.move()
+            bit.paint('green')
+            bit.right()
+            bit.right()
+            bit.move()
+            bit.left()
+    bit.move()
+    
+# Attempt 2
+
+def up_green(filename):
+    bit = Bit(filename)
+    while not bit.right_clear():
+        bit.move()
+        if bit.left_clear():
+            bit.left()
+            bit.move()
+            bit.paint('green')
+            bit.right()
+            bit.right()
+            bit.move()
+            bit.left()
+    bit.right()
+    bit.move()
+    
