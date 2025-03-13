@@ -1,0 +1,82 @@
+# Part 1 - Attempt 1
+
+def do_row0(bit):
+    """
+    Begin facing down in the row to fill.
+    Move towards the right side of the world,
+    making a type-0 row.
+    End at the left side of the row, facing down.
+    """
+    bit.left()
+    bit.paint('blue')
+    while bit.front_clear():
+        if bit.get_color()=='blue':
+            bit.move()
+            bit.erase()
+        elif bit.get_color()==None:
+            bit.move()
+            bit.paint('blue')
+    bit.left()
+    bit.left()
+    while bit.front_clear():
+        bit.move()
+    bit.left()
+
+# Part 2 - Attempt 1
+
+def do_row1(bit):
+    """
+    Begin facing down in the row to fill.
+    Move towards the right side of the world,
+    making a type-1 row.
+    End at the left side of the row, facing down.
+    """
+    bit.left()
+    bit.erase()
+    while bit.front_clear():
+        if bit.get_color()=='blue':
+            bit.move()
+            bit.erase()
+        elif bit.get_color()==None:
+            bit.move()
+            bit.paint('blue')
+    bit.left()
+    bit.left()
+    while bit.front_clear():
+        bit.move()
+    bit.left()
+
+# Part 3 - Attempt 1
+
+def do_checkerboard(filename):
+    """
+    Begin in the upper left corner facing down.
+    Fill the whole world with the checkerboard pattern,
+    ending at the lower left facing down.
+    """
+    bit = Bit(filename)
+    do_row0(bit)
+    while bit.front_clear():
+        if bit.get_color()=='blue':
+            bit.move()
+            do_row1(bit)
+        bit.move()
+        do_row0(bit)
+
+# Part 3 - Attempt 2 - Changed the exiting of the while loop to an elif on line 80
+
+def do_checkerboard(filename):
+    """
+    Begin in the upper left corner facing down.
+    Fill the whole world with the checkerboard pattern,
+    ending at the lower left facing down.
+    """
+    bit = Bit(filename)
+    do_row0(bit)
+    while bit.front_clear():
+        if bit.get_color()=='blue':
+            bit.move()
+            do_row1(bit)
+        elif bit.get_color()==None:
+            bit.move()
+            do_row0(bit)
