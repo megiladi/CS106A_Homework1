@@ -1,0 +1,12 @@
+# Attempt 1
+
+def downward_red(filename):
+    bit = Bit(filename)
+    while not bit.right_clear():
+        bit.move()
+        bit.paint('green')
+    bit.right()
+    while bit.front_clear():
+        bit.move()
+        if bit.get_color()=='green':
+            bit.paint('red')
